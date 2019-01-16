@@ -16,6 +16,7 @@ namespace facebook_music_spammer
     public static class HttpTriggered
     {
         private static HttpClient _httpClient = new HttpClient();
+        private static string superSecret = System.Environment.GetEnvironmentVariable("test");
 
         [FunctionName("HttpTriggered")]
         public static async Task<IActionResult> Run(
